@@ -4,7 +4,6 @@
 @endsection
 @section('content')
 <!---->
-<!---->
 <div class="container" style="position: relative; top: 80%; margin-top: 200px;">
 			<div class="login-block w-50 m-auto">
 				<div class="row">

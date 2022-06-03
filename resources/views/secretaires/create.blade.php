@@ -31,18 +31,10 @@
                                                         <label for="exampleInputEmail1">Nom de secrétaire</label>
                                                     </div>
                                                     <div class="col-md-8">
-                                                    <!-- on va définit l'attribut value avec une fonction
-                                                    nommé old(nom d'input) fonction hadhi tsajelek akher valeur kan fel input okii ok bien -->
                                                         <input type="text" class="form-control" value="{{ old('name') }}" placeholder="Saisir le nom de secretaire" name="name">
-                                                        <!-- Lazem kol message d'erreur mta3 input yji te7t l'input mta3a hekka walla ? ey bien
-                                                        voir comment  -->
                                                         @error('name')
                                                             <p class="text-danger">{{ $message }}</p>
                                                         @enderror
-                                                        <!-- $message trouve la resultat de la fonction error okii ok  -->
-                                                        <!-- error fonction prés définit takhedh comme parametre ems l'input w traje3 variale fih
-                                                        message d'erruer okii ok bien
-                                                        nchoufou template mta3na nalgouch feha message d'erreur rtah  -->
                                                     </div>
                                                 </div>
                                             </div>

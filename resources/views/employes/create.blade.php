@@ -7,8 +7,6 @@
         @include('includes.aside')
         <div class="content-wrapper">
             <!-- insérer un formualaire à travers le template  -->
-            <!---->
-            <!-- -->
             <div class="content">
                 <div class="container">
                 @include('includes.stat')
