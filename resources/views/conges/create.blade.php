@@ -77,13 +77,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- -->
-                                    <!-- -->
-
 
                                     </div>
                                     <!-- /.card-body -->
-                                    <!--  -->
                                     <div class="card-footer">
                                     <div class="row">
                                         <div class="col-12">
