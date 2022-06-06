@@ -73,7 +73,6 @@ Route::get('/dates', function(){
 })
 ;
 Route::get('users', 'UsersController@index');
-// users is the path , UsersController is the controller and the index is the function of treatment in controller
 Route::get('/user/{id}/conge', function($id){
     $conge  = App\User::find($id)->conge;
         echo $conge->motif;
@@ -86,13 +85,13 @@ Route::get('/foreach', function(){
     // Exemple de table associative
     $assoc = array(
         [
-            "nom" => "Mouheb",
-            "email" => "mouehbabderrahil@gmail.com",
+            "nom" => "sousou",
+            "email" => "sousou@gmail.com",
             "age" => 25
         ],
         [
-            "nom" => "moataz",
-            "email" => "maoataz@gmail.com",
+            "nom" => "moumou",
+            "email" => "moumou@gmail.com",
             "age" => 22
         ]
     );

@@ -13,9 +13,6 @@ class CreateUsersTable extends Migration
      */
     // c'est la class de migrations users
     //  User (Id, name, email, password, numtel, adresse,date de recrutement, grade )
-    // On a manqué quatre champs n'est ce pas ? nn 3leh ?
-    // 3ena numtel w adresse, w date de recrutement w grade ma famech hekka waal ? ey
-    // on doit les ajouter comme les autres ey okii
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
@@ -42,7 +39,6 @@ class CreateUsersTable extends Migration
     {
         Schema::dropIfExists('users');
     }
-    // Si vous avez remarqué qu'on a deux fonctions dans cette classe n'est ce pas ?? uibien
     // function up pour la creation de la table dans la BD
-    // function down pour la suppression de la table de la BD claire ?? uihayel barcha
+    // function down pour la suppression de la table de la BD
 }
