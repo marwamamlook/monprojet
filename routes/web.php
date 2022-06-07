@@ -42,7 +42,10 @@ Route::put('employe/{id}/retraite', function($id){
 Route::get('/soldes', 'SoldeController@index');
 Route::get('/soldes/employe', 'EmployeController@solde');
 Route::post('employes/filtrer', 'EmployeController@filtrer');
-Route::resource('conges', 'CongeController');
+Route::resource('/conges', 'CongeController');
+// Route::get('/conges/create'  ,'CongeController@create');
+// Route::post('/conges/store'  ,'CongeController@store')->name('conges.store');
+// Route::get('/conges','CongeController@index');
 Route::get('conges/accepter/{id}', 'CongeController@accepter');
 Route::get('conges/refuser/{id}', 'CongeController@refuser');
 Route::get('historiques', 'CongeController@historique');

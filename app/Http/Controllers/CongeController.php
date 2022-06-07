@@ -56,37 +56,54 @@ class CongeController extends Controller
      */
     public function store(Request $request)
     {
-        $aujourdhui_m = date('m',strtotime(Carbon::now()));
-        $aujourdhui_y = date('y',strtotime(Carbon::now()));
-        $timestamp = Auth::user()->date_recrutement;
-        $month_rec = date("m", strtotime($timestamp));
-        $year_rec =  date("y", strtotime($timestamp));
+      // dd($request);
+        $aujourdhui_m = date('m',strtotime(Carbon::now())); // mois courant
+        $aujourdhui_y = date('y',strtotime(Carbon::now())); // anne courant
+        $timestamp = Auth::user()->date_recrutement; // dat de recrutement
+        $month_rec = date("m", strtotime($timestamp)); // mois recrutement
+        $year_rec =  date("y", strtotime($timestamp)); // anne recrtutement
+
+     //   dd($aujourdhui_y , $year_rec);
         if($aujourdhui_y == $year_rec){
+           // echo "if 1";
             $month_compare = $month_rec - $aujourdhui_m;
             if($month_compare < 6){
+          //      echo "if 1 1";
                 return redirect('/conges')->with('conge-error', 'Vous devez dépasser six mois de travail avant la demande de congé');
             }else{
+         //       echo "if 1 else";
                 $conge = new Conge();
                 $conge->user_id = Auth::user()->id;
                 $conge->date_debut = $request->input('date_debut');
                 $conge->date_retour = $request->input('date_retour');
                 $conge->cause = $request->input('cause');
-                $conge->save();
+               if ( $conge->save() ){
+                return redirect('/conges')->with('add-message', 'Le congé a été ajouté avec succée');
+               }else{
+                return redirect('/conges')->with('add-message', 'Erreur niveau 1');
+            }
 
-                return redirect('conges')->with('add-message', 'Le congé a été ajouté avec succée');
+
             }
         } else if($aujourdhui_y > $year_rec){
+          //  echo "else if 1";
             $year_compare = $aujourdhui_y - $year_rec;
             if($year_compare > 1){
+         //       echo "else if 1 1";
                 $conge = new Conge();
                 $conge->user_id = Auth::user()->id;
                 $conge->date_debut = $request->input('date_debut');
                 $conge->date_retour = $request->input('date_retour');
                 $conge->cause = $request->input('cause');
-                $conge->save();
+                if ( $conge->save() ){
+                    return redirect('/conges')->with('add-message', 'Le congé a été ajouté avec succée');
+                   }else{
+                    return redirect('/conges')->with('add-message', 'Erreur niveau 2');
+                }
 
-                return redirect('conges')->with('add-message', 'Le congé a été ajouté avec succée');
+
             } else {
+          //      echo "else if 1 else ";
                 $m1 = 12 - $month_rec;
                 if($m1 + $aujourdhui_m < 6){
                     return redirect('/conges')->with('conge-error', 'Vous devez dépasser six mois de travail avant la demande de congé');
@@ -96,8 +113,11 @@ class CongeController extends Controller
                     $conge->date_debut = $request->input('date_debut');
                     $conge->date_retour = $request->input('date_retour');
                     $conge->cause = $request->input('cause');
-                    $conge->save();
-                    return redirect('conges')->with('add-message', 'Le congé a été ajouté avec succée');
+                    if ( $conge->save() ){
+                        return redirect('/conges')->with('add-message', 'Le congé a été ajouté avec succée');
+                       }else{
+                        return redirect('/conges')->with('add-message', 'Erreur niveau 3');
+                    }
                 }
             }
         }

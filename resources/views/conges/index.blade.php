@@ -165,17 +165,8 @@
                         </td>
                 </tr>
                     @endforeach
-                <tfoot>
-                    <th></th>
-                </tfoot>
-                <!--
-                 -->
-                    <th class="text-center">ID</th>
-                    <th class="text-center">Date debut</th>
-                    <th class="text-center">date retour</th>
-                    <th class="text-center">cause</th>
-                    <th class="text-center">acceptation</th>
-                    <th>action</th>
+               
+
                 </tbody>
 
               </table>

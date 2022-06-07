@@ -18,7 +18,7 @@ ensuite on va faire le traitement  -->
                             <!--  -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">modifier employé</h3>
+                                    <h3 class="card-title">modifier un employé</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->

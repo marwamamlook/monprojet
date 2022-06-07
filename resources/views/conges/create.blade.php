@@ -17,9 +17,9 @@
                             <!-- le formulaire   -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Ajouter congé</h3>
+                                    <h3 class="card-title">Ajouter un congé</h3>
                                 </div>
-                                <form action="{{ url('conges') }}" method="post">
+                                <form action="{{ route('conges.store') }}" method="post">
                                     @csrf
                                     <div class="card-body">
                                     <div class="row">

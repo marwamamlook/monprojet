@@ -170,6 +170,47 @@
         </ul>
       </nav>
       @endif
+      @if(Auth::user()->grade == "enseignant")
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item  ">
+            <a href="{{ url('historiques') }}" class="nav-link {{ Request::is('employes') ? 'active' : '' }} ">
+              <i class="nav-icon fa fa-dashboard"></i>
+              <p>
+                Historiques
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('conges')}}" class="nav-link {{ Request::is('conges') ? 'active' : '' }}">
+              <i class="nav-icon fa fa-th"></i>
+              <p>
+                Congés
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('/soldes/employe')}}" class="nav-link {{ Request::is('conges') ? 'active' : '' }}">
+              <i class="nav-icon fa fa-th"></i>
+              <p>
+                Consulter mon solde
+              </p>
+            </a>
+          </li>
+          <!--  -->
+          <li class="nav-item ">
+            <a href="{{ url('contacts')}}" class="nav-link {{ Request::is('contacts') ? 'active' : '' }}">
+              <i class="fa fa-envelope-square"></i>
+              <p>
+                Contacts
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      @endif
       @if(Auth::user()->grade == "secretaire")
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">

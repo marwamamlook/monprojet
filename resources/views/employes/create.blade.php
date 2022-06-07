@@ -15,7 +15,7 @@
                             <!-- -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Quick Example</h3>
+                                    <h3 class="card-title">Ajouter un employé</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
@@ -156,7 +156,10 @@
                                                     <div class="col-md-8">
                                                         <select name="grade">
                                                             <option value="agent administratif">Agent administratif</option>
-                                                            <option value="employé">Employé</option>
+                                                            <option value="employe">Employé</option>
+                                                            <option value="directeur">Directeur</option>
+                                                            <option value="secretaire">Secretaire</option>
+                                                            <option value="enseignant">Enseignant</option>
                                                         </select>
                                                         @error('grade')
                                                             <p class="text-danger">{{ $message }}</p>

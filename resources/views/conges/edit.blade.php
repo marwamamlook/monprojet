@@ -15,7 +15,7 @@
                             <!---->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Quick Example</h3>
+                                    <h3 class="card-title">Modifier un congé</h3>
                                 </div>
                                 <form action="{{ url('conges/'.$conge->id) }}" method="post">
                                     @csrf
