@@ -131,7 +131,6 @@
                                     </div>
                                     </div>
                                     <!-- /.card-body -->
-                                    <!-- trah njarbou code mta3na taw nchoufouhom yetsajlou walla  -->
                                     <div class="card-footer">
                                     <div class="row">
                                         <div class="col-12">

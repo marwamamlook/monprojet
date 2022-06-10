@@ -123,8 +123,6 @@
                         <!---->
                         <div class="row">
                             <div class="col-md-6">
-                            <!-- 'employes/'.$secretaire->id.'/edit' le path de modification
-                            aller au web file  -->
                                 <a href="{{ url('secretaires/'.$secretaire->id.'/edit') }}">
                                 <i class="fas fa-user-edit" style="color: blue; transform:scale(1.5)"></i>
                                 </a>
