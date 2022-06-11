@@ -45,7 +45,6 @@
                 @foreach($soldes as $solde)
                 <div class="col-md-3 col-sm-6 col-12">
                     <div class="info-box bg-info">
-                        <span class="info-box-icon"><i class="far fa-bookmark"></i></span>
                         <div class="info-box-content">
                             <span class="info-box-text">
                             {{ DB::table('users')->where('id', $solde->user_id)->first()->name }}
@@ -61,7 +60,7 @@
                                 {{ DB::table('users')->where('id', $solde->user_id)->first()->name }}
                                 as
                             @endif
-                            utilisé {{ number_format((( 30 - $solde->solde)/30)*100, 2, ',', '') }}% de son solde
+                            utilisé </br> {{ number_format((( 30 - $solde->solde)/30)*100, 2, ',', '') }}% de son solde
                             </span>
                         </div>
                     </div>
