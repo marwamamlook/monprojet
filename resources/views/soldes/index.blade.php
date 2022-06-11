@@ -30,13 +30,11 @@
                     @include('includes.stat')
                     <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Liste des employés</h1>
+                        <h1>Consulter solde</h1>
                     </div>
                     <!-- -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">DataTables</li>
                         </ol>
                     </div>
                     </div>
@@ -53,7 +51,7 @@
                             {{ DB::table('users')->where('id', $solde->user_id)->first()->name }}
                             </span>
                             <span class="info-box-number">Solde total: 30</span>
-                            <span class="info-box-number">@if(Auth::user()->grade == "employe") Votre @endif Solde restante {{ $solde->solde }}</span>
+                            <span class="info-box-number">@if(Auth::user()->grade == "employe")  @endif Solde restant: {{ $solde->solde }}</span>
                             <div class="progress">
                             <div class="progress-bar" style="width: {{ ((30 - $solde->solde)/30)*100 }}%"></div>
                             </div>

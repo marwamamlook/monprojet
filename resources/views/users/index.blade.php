@@ -27,12 +27,10 @@
                     @include('includes.stat')
                     <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>DataTables</h1>
+                        <h1>Liste des utilisateurs</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">DataTables</li>
                         </ol>
                     </div>
                     </div>
@@ -43,7 +41,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">DataTable with minimal features &amp; hover style</h3>
+                                <h3 class="card-title">Liste des utilisateurs</h3>
                             </div>
                             <div class="card-body">
               <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
@@ -98,9 +96,6 @@
                 <tfoot>
                     <th></th>
                 </tfoot>
-                <!-- Abrak tawa
-                    tawa nemshou n7awlou n7elou lpage hadhii à travers le controller okii ok
-                 -->
                     <th class="text-center">ID</th>
                     <th class="text-center">name</th>
                     <th class="text-center">email</th>
