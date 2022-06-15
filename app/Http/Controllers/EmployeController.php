@@ -175,7 +175,7 @@ class EmployeController extends Controller
     public function destroy($id)
     {
         Employe::find($id)->delete();
-        return redirect('employes')->with('delete-message', 'L\'employé a été supprimé avec succé'); // claire ui na9es lmsg lazem nzidou hak flash tafakrtih ? kima alert? ey sahetii
+        return redirect('employes')->with('delete-message', 'L\'employé a été supprimé avec succé');
     }
 
     public function retraite($id){

@@ -136,7 +136,7 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item  ">
             <a href="{{ url('historiques') }}" class="nav-link {{ Request::is('employes') ? 'active' : '' }} ">
-              <i class="nav-icon fa fa-dashboard"></i>
+              <i class="nav-icon fa fa-th"></i>
               <p>
                 Historiques
               </p>

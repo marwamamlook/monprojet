@@ -129,14 +129,14 @@
                         <td>
                         <div class="row">
                             @if(Auth::user()->grade == "agent administratif" or Auth::user()->grade == "directeur")
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 <a href="{{ url('conges/accepter/'.$conge->id) }}">
                                     <button class="btn btn-success" @if($conge->acceptation == "oui") disabled @endif>
                                         Accepter
                                     </button>
                                 </a>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-6">
                                 <a href="{{ url('conges/refuser/'.$conge->id) }}">
                                     <button class="btn btn-danger" @if($conge->acceptation == "non") disabled @endif>
                                         Réfuser
@@ -165,7 +165,7 @@
                         </td>
                 </tr>
                     @endforeach
-               
+
 
                 </tbody>
 
